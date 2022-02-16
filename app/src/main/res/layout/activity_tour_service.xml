@@ -92,19 +92,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="70dp"
         android:gravity="center"
         >
         <ImageView
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/fb"
+            android:src="@drawable/fb1"
             android:layout_margin="20dp"
             />
         <ImageView
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/google"
+            android:src="@drawable/google2"
             android:layout_margin="20dp"
             />
 
