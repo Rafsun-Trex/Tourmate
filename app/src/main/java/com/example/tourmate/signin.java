@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.AuthResult;
@@ -63,17 +64,12 @@ public class signin extends AppCompatActivity {
         }
 
         auth.signInWithEmailAndPassword(email, pass)
-                .addOnCompleteListener(signin.this, new OnCompleteListener<AuthResult>() {
+                .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                     @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            Toast.makeText(signin.this, "Login successful!", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(signin.this,welcome.class));
-                        }
-                        else
-                        {
-                            Toast.makeText(signin.this, "Error "+task.getException(), Toast.LENGTH_SHORT).show();
-                        }
+                    public void onSuccess(AuthResult authResult) {
+                        Toast.makeText(signin.this, "Logged in...", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(signin.this,welcome.class));
+                        finish();
                     }
                 });
     }
