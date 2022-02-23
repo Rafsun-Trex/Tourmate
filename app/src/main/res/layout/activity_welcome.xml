@@ -9,12 +9,13 @@
 
     <TextView
         android:id="@+id/tourmateTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="307dp"
+        android:layout_height="67dp"
         android:layout_marginTop="64dp"
         android:fontFamily="@font/aclonica"
         android:text="Tourmate"
-        android:textSize="40sp"
+        android:textAlignment="center"
+        android:textSize="50sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +26,7 @@
         android:id="@+id/locationEditTxt"
         android:layout_width="277dp"
         android:layout_height="55dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="48dp"
         android:drawableLeft="@drawable/ic_baseline_not_listed_location_24"
         android:drawablePadding="10dp"
         android:drawableTint="@color/white"
@@ -33,6 +34,7 @@
         android:textColorHint="@color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tourmateTxt" />
 
