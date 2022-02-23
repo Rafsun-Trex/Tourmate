@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/servicebg"
-    tools:context=".tourService">
+    tools:context=".signin">
     <TextView
         android:id="@+id/signin"
         android:layout_width="match_parent"
@@ -30,7 +30,7 @@
         android:drawableLeft="@drawable/ic_baseline_person_24"
         android:drawablePadding="10dp"
         android:drawableTint="@color/white"
-        android:hint="Username"
+        android:hint="User email"
         android:padding="20dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white" />
@@ -61,7 +61,7 @@
         android:layout_below="@id/password"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="47dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:backgroundTint="@color/design_default_color_secondary"
@@ -74,44 +74,21 @@
         android:layout_below="@id/loginbtn"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:text="Forgot password"
         android:textColor="@color/white" />
+
     <TextView
         android:id="@+id/others"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="or signin with"
-        android:textColor="@color/black"
-        android:layout_above="@id/socialicons"
+        android:layout_below="@id/forgotPass"
         android:layout_centerHorizontal="true"
-        />
-
-    <LinearLayout
-        android:id="@+id/socialicons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="70dp"
-        android:gravity="center"
-        >
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:src="@drawable/fb1"
-            android:layout_margin="20dp"
-            />
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:src="@drawable/google2"
-            android:layout_margin="20dp"
-            />
-
-
-    </LinearLayout>
+        android:layout_marginTop="49dp"
+        android:text="signup now!"
+        android:textColor="@color/black" />
 
 
 </RelativeLayout>
