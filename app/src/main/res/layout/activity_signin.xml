@@ -68,7 +68,7 @@
         android:text="LOGIN" />
 
     <TextView
-        android:id="@+id/forgotPass"
+        android:id="@+id/forgotPassBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/loginbtn"
@@ -84,11 +84,12 @@
         android:id="@+id/others"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/forgotPass"
+        android:layout_below="@id/forgotPassBtn"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="49dp"
         android:text="signup now!"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:textSize="24sp" />
 
 
 </RelativeLayout>
