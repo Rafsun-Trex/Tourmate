@@ -3,7 +3,7 @@ package com.example.tourmate;
 public class DataModel {
     public String header;
     public String desc;
-    public int imgname;
+    public int imagename;
 
     public String getHeader() {
         return header;
@@ -21,11 +21,11 @@ public class DataModel {
         this.desc = desc;
     }
 
-    public int getImgname() {
-        return imgname;
+    public int getImagename() {
+        return imagename;
     }
 
-    public void setImgname(int imgname) {
-        this.imgname = imgname;
+    public void setImagename(int imagename) {
+        this.imagename = imagename;
     }
 }
