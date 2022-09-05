@@ -19,6 +19,7 @@ public class suggestions extends AppCompatActivity {
         setContentView(R.layout.suggestions);
 
         rec = (RecyclerView) findViewById(R.id.recview);
+        rec.setHasFixedSize(true);
         rec.setLayoutManager(new LinearLayoutManager(this));
         adapter = new myadapter(dataqueue(), getApplicationContext());
         rec.setAdapter(adapter);
