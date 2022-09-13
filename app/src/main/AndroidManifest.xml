@@ -12,6 +12,8 @@
         <activity
             android:name=".registration"
             android:exported="false" />
+        <activity android:name=".suggestions"
+            android:exported="false" />
         <activity
             android:name=".welcome"
             android:exported="false" />
