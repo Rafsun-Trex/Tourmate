@@ -28,7 +28,7 @@ public class welcome extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(welcome.this, "Tour suggestions are on the way!!!", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(welcome.this, suggestions.class);
+                Intent intent = new Intent(welcome.this, result_recview.class);
                 startActivity(intent);
             }
         });

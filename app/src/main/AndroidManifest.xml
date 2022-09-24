@@ -12,7 +12,7 @@
         <activity
             android:name=".registration"
             android:exported="false" />
-        <activity android:name=".suggestions"
+        <activity android:name=".result_recview"
             android:exported="false" />
         <activity
             android:name=".welcome"

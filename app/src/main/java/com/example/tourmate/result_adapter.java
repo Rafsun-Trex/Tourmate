@@ -10,12 +10,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class myadapter extends RecyclerView.Adapter<myviewholder> {
+public class result_adapter extends RecyclerView.Adapter<result_viewholder> {
 
-    ArrayList<DataModel> data;
+    ArrayList<result_datamodel> data;
     Context context;
 
-    public myadapter(ArrayList<DataModel> data, Context context)
+    public result_adapter(ArrayList<result_datamodel> data, Context context)
     {
         this.data = data;
         this.context = context;
@@ -23,17 +23,17 @@ public class myadapter extends RecyclerView.Adapter<myviewholder> {
 
     @NonNull
     @Override
-    public myviewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view = inflater.inflate(R.layout.cardview,parent,false);
-        return new myviewholder(view);
+    public result_viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.result_rec_cardview, parent,false);
+        return new result_viewholder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull myviewholder holder, int position) {
+    public void onBindViewHolder(@NonNull result_viewholder holder, int position) {
         holder.t1.setText(data.get(position).getHeader());
         holder.t2.setText(data.get(position).getDesc());
         holder.img.setImageResource(data.get(position).getImagename());
+
     }
 
     @Override

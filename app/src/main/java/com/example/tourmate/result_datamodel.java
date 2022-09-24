@@ -1,6 +1,6 @@
 package com.example.tourmate;
 
-public class DataModel {
+public class result_datamodel {
     public String header;
     public String desc;
     public int imagename;
