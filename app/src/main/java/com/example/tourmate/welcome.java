@@ -52,7 +52,6 @@ public class welcome extends AppCompatActivity {
                     setResultText(resultValue);
                 }
 
-
               /*  Toast.makeText(welcome.this, "Tour suggestions are on the way!!!", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(welcome.this, result_recview.class);
                 startActivity(intent);*/
@@ -90,7 +89,7 @@ public class welcome extends AppCompatActivity {
             result.setText("Saint Martin");
         }
         else if(resultValue==6){
-            result.setText("Sajek");
+            result.setText("Sajek Valley");
         }
         else if(resultValue==7){
             result.setText("Sitakunda");
@@ -195,9 +194,6 @@ public class welcome extends AppCompatActivity {
 
     private Boolean isValid() {
 
-        memberValue= Float.valueOf(memberEditTxt.getText().toString());
-        costValue= Float.valueOf(budgetEditTxt.getText().toString());
-
         if (monthValue == 0.0f) {
             Toast.makeText(welcome.this, "Select a month", Toast.LENGTH_SHORT).show();
             return false;
@@ -206,14 +202,16 @@ public class welcome extends AppCompatActivity {
             Toast.makeText(welcome.this, "Select a transport", Toast.LENGTH_SHORT).show();
             return false;
         }
-        if (memberValue == 0.0f) {
+        if (memberEditTxt.getText().toString().equals("")) {
             Toast.makeText(welcome.this, "Enter tour member", Toast.LENGTH_SHORT).show();
             return false;
         }
-        if (costValue == 0.0f) {
+        if (budgetEditTxt.getText().toString().equals("")) {
             Toast.makeText(welcome.this, "Enter tour budget", Toast.LENGTH_SHORT).show();
             return false;
         }
+        memberValue= Float.valueOf(memberEditTxt.getText().toString());
+        costValue= Float.valueOf(budgetEditTxt.getText().toString());
         return true;
     }
 
@@ -230,6 +228,11 @@ public class welcome extends AppCompatActivity {
         try {
 
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(4 * 4);
+
+            byteBuffer.putFloat(monthValue);
+            byteBuffer.putFloat(transportValue);
+            byteBuffer.putFloat(memberValue);
+            byteBuffer.putFloat(costValue);
 
             TourPlan model = TourPlan.newInstance(this);
 
